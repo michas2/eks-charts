@@ -1,0 +1,43 @@
+# Default values for EKS cluster config.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+applicationName: bsee
+persistentVolumeClaim: bsee-pvc
+containerRegistry: "public.ecr.aws"
+
+maxCpuPerContainer: 4000m
+minCpuPerContainer: 100m
+defaultCpuPerContainer: 100m
+defaultRequestCpuPerContainer: 100m
+
+maxMemoryPerContainer: 5Gi
+minMemoryPerContainer: 128Mi
+defaultMemoryPerContainer: 128Mi
+defaultRequestMemoryPerContainer: 128Mi
+
+webServerContainerCpu: 1400m
+webServerContainerMemory: 4Gi
+enterpriseServerContainerCpu: 1400m
+enterpriseServerContainerMemory: 4Gi
+scanContainerCpu: 1400m
+scanContainerMemory: 5Gi
+
+services:
+  webServer:
+    label: "app.portswigger.net/ingress: web-server"
+    domainName: "bsee"
+
+support:
+  oracle: false
+
+ingress:
+  enabled: false
+  hostName: burpsuite.example.com
+
+pvc:
+  enabled: false
+  size: 20Gi
+
+https:
+  enabled: true
