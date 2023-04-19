@@ -1,0 +1,104 @@
+apiVersion: v1
+entries:
+  burp-suite-enterprise-edition:
+  - apiVersion: v2
+    appVersion: 2022.7-10356
+    created: "2023-04-19T13:12:27.54953617Z"
+    description: A Helm chart to create the k8s cluster dependencies for BSEE
+    digest: ef737d11618d7f1a04b0b65c7ff10ebaa5f6f926027d171f90789aeebdc1f157
+    name: burp-suite-enterprise-edition
+    type: application
+    urls:
+    - https://github.com/michas2/eks-charts/releases/download/burp-suite-enterprise-edition-2022.7.0/burp-suite-enterprise-edition-2022.7.0.tgz
+    version: 2022.7.0
+  cloudbees-core:
+  - annotations:
+      artifacthub.io/links: |
+        - name: Product overview
+          url: https://www.cloudbees.com/products/continuous-integration
+        - name: Documentation
+          url: https://docs.cloudbees.com/docs/cloudbees-ci/latest/
+    apiVersion: v2
+    appVersion: 2.387.2.4
+    created: "2023-04-19T13:12:27.730170275Z"
+    dependencies:
+    - condition: ingress-nginx.Enabled
+      name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: 4.5.2
+    - condition: sidecarinjector.Enabled
+      name: cloudbees-sidecar-injector
+      repository: https://charts.cloudbees.com/public/cloudbees
+      version: 2.3.3
+    description: Enterprise Continuous Integration with Jenkins
+    digest: dcd0140a68750c67270afe9e8927853da45346a38d74d287fc589426c1cb5e53
+    home: https://www.cloudbees.com/products/continuous-integration
+    icon: https://images.ctfassets.net/vtn4rfaw6n2j/7xprMMXARXDBuVxW4y8XfV/349fff91035050e3f2a8ff37bc0615b5/cloudbees-core-logo_header.svg
+    keywords:
+    - cloudbees
+    - jenkins
+    kubeVersion: '>= 1.19.0-0'
+    name: cloudbees-core
+    urls:
+    - https://github.com/michas2/eks-charts/releases/download/cloudbees-core-3.11627-2e5eff15bf01/cloudbees-core-3.11627-2e5eff15bf01.tgz
+    version: 3.11627-2e5eff15bf01
+  cloudbees-sidecar-injector:
+  - apiVersion: v1
+    appVersion: 2.3.3
+    created: "2023-04-19T13:12:27.853196883Z"
+    description: Helm chart for sidecar injector webhook deployment
+    digest: b649ca19174ab2dc3d5195063392fc8b57d59767495bcdff3e08c4acf5532cbc
+    keywords:
+    - cloudbees
+    - sidecar-injector
+    kubeVersion: '>= 1.21.0-0'
+    name: cloudbees-sidecar-injector
+    urls:
+    - https://github.com/michas2/eks-charts/releases/download/cloudbees-sidecar-injector-2.3.3/cloudbees-sidecar-injector-2.3.3.tgz
+    version: 2.3.3
+  jenkins:
+  - annotations:
+      artifacthub.io/images: |
+        - name: jenkins
+          image: jenkins/jenkins:2.346.3-jdk11
+        - name: k8s-sidecar
+          image: kiwigrid/k8s-sidecar:1.15.0
+        - name: inbound-agent
+          image: jenkins/inbound-agent:4.11.2-4
+        - name: backup
+          image: maorfr/kube-tasks:0.2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/jenkinsci/helm-charts/tree/main/charts/jenkins
+        - name: Jenkins
+          url: https://www.jenkins.io/
+    apiVersion: v2
+    appVersion: 2.346.3
+    created: "2023-04-19T13:12:27.988301499Z"
+    description: Jenkins - Build great things at any scale! The leading open source
+      automation server, Jenkins provides hundreds of plugins to support building,
+      deploying and automating any project.
+    digest: 7da480597b6e437f848ae039a6ba9db36362e17233bce976d238ff7121cc908b
+    home: https://jenkins.io/
+    icon: https://get.jenkins.io/art/jenkins-logo/logo.svg
+    maintainers:
+    - email: maor.friedman@redhat.com
+      name: maorfr
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    - email: garridomota@gmail.com
+      name: mogaal
+    - email: wmcdona89@gmail.com
+      name: wmcdona89
+    - email: timjacomb1@gmail.com
+      name: timja
+    name: jenkins
+    sources:
+    - https://github.com/jenkinsci/jenkins
+    - https://github.com/jenkinsci/docker-inbound-agent
+    - https://github.com/maorfr/kube-tasks
+    - https://github.com/jenkinsci/configuration-as-code-plugin
+    urls:
+    - https://github.com/michas2/eks-charts/releases/download/jenkins-4.1.17/jenkins-4.1.17.tgz
+    version: 4.1.17
+generated: "2023-04-19T13:12:27.988805516Z"
