@@ -20,6 +20,36 @@ entries:
           url: https://docs.cloudbees.com/docs/cloudbees-ci/latest/
     apiVersion: v2
     appVersion: 2.387.1.3
+    created: "2023-04-19T03:56:54.981897207Z"
+    dependencies:
+    - condition: ingress-nginx.Enabled
+      name: ingress-nginx
+      repository: https://kubernetes.github.io/ingress-nginx
+      version: 4.0.13
+    - condition: sidecarinjector.Enabled
+      name: cloudbees-sidecar-injector
+      repository: https://michas2.github.io/eks-charts/
+      version: 2.3.3
+    description: Enterprise Continuous Integration with Jenkins
+    digest: 434f70e6cc2c630d545ae655d0b7eb4aa9ac74c159e0f16203ab3aae31db578b
+    home: https://www.cloudbees.com/products/continuous-integration
+    icon: https://images.ctfassets.net/vtn4rfaw6n2j/7xprMMXARXDBuVxW4y8XfV/349fff91035050e3f2a8ff37bc0615b5/cloudbees-core-logo_header.svg
+    keywords:
+    - cloudbees
+    - jenkins
+    kubeVersion: '>= 1.19.0-0'
+    name: cloudbees-core
+    urls:
+    - https://github.com/michas2/eks-charts/releases/download/cloudbees-core-3.56.29/cloudbees-core-3.56.29.tgz
+    version: 3.56.29
+  - annotations:
+      artifacthub.io/links: |
+        - name: Product overview
+          url: https://www.cloudbees.com/products/continuous-integration
+        - name: Documentation
+          url: https://docs.cloudbees.com/docs/cloudbees-ci/latest/
+    apiVersion: v2
+    appVersion: 2.387.1.3
     created: "2023-04-19T00:35:52.905029842Z"
     dependencies:
     - condition: ingress-nginx.Enabled
@@ -43,6 +73,19 @@ entries:
     - https://github.com/michas2/eks-charts/releases/download/cloudbees-core-3.56.2/cloudbees-core-3.56.2.tgz
     version: 3.56.2
   cloudbees-sidecar-injector:
+  - apiVersion: v1
+    appVersion: 2.3.3
+    created: "2023-04-19T03:56:55.112110645Z"
+    description: Helm chart for sidecar injector webhook deployment
+    digest: 21c612588733280d142afaed0ab755cac258884e3713571130b1c16b4a625016
+    keywords:
+    - cloudbees
+    - sidecar-injector
+    kubeVersion: '>= 1.21.0-0'
+    name: cloudbees-sidecar-injector
+    urls:
+    - https://github.com/michas2/eks-charts/releases/download/cloudbees-sidecar-injector-2.3.39/cloudbees-sidecar-injector-2.3.39.tgz
+    version: 2.3.39
   - apiVersion: v1
     appVersion: 2.3.3
     created: "2023-04-19T00:28:34.005763051Z"
@@ -101,4 +144,4 @@ entries:
     urls:
     - https://github.com/michas2/eks-charts/releases/download/jenkins-4.1.17/jenkins-4.1.17.tgz
     version: 4.1.17
-generated: "2023-04-19T00:35:52.905086745Z"
+generated: "2023-04-19T03:56:55.112285151Z"
