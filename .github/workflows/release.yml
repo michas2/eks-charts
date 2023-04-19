@@ -27,7 +27,6 @@ jobs:
         run: |
           helm repo add kubernetes https://kubernetes.github.io/ingress-nginx
           helm repo add cloudbees  https://charts.cloudbees.com/public/cloudbees
-          helm repo add me         https://michas2.github.io/eks-charts/
 
       - name: Install Helm
         uses: azure/setup-helm@v3
