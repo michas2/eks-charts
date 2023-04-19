@@ -11,6 +11,20 @@ entries:
     urls:
     - https://github.com/michas2/eks-charts/releases/download/burp-suite-enterprise-edition-2022.7.0/burp-suite-enterprise-edition-2022.7.0.tgz
     version: 2022.7.0
+  cloudbees-sidecar-injector:
+  - apiVersion: v1
+    appVersion: 2.3.3
+    created: "2023-04-19T00:28:34.005763051Z"
+    description: Helm chart for sidecar injector webhook deployment
+    digest: e98434b154108e3eef2c37daa7b614f4b8ce2910d2eea8fb8d557f47967818dd
+    keywords:
+    - cloudbees
+    - sidecar-injector
+    kubeVersion: '>= 1.21.0-0'
+    name: cloudbees-sidecar-injector
+    urls:
+    - https://github.com/michas2/eks-charts/releases/download/cloudbees-sidecar-injector-2.3.3/cloudbees-sidecar-injector-2.3.3.tgz
+    version: 2.3.3
   jenkins:
   - annotations:
       artifacthub.io/images: |
@@ -56,4 +70,4 @@ entries:
     urls:
     - https://github.com/michas2/eks-charts/releases/download/jenkins-4.1.17/jenkins-4.1.17.tgz
     version: 4.1.17
-generated: "2022-08-23T19:35:41.654629768Z"
+generated: "2023-04-19T00:28:34.005768052Z"
