@@ -1,0 +1,9 @@
+dependencies:
+- name: ingress-nginx
+  repository: https://kubernetes.github.io/ingress-nginx
+  version: 4.5.2
+- name: cloudbees-sidecar-injector
+  repository: https://charts.cloudbees.com/public/cloudbees
+  version: 2.3.3
+digest: sha256:c46a431f753a6536a6e7454a257402a0d8f624db3d2d7c0af079024bc475c010
+generated: "2023-03-07T11:24:05.09813847Z"
